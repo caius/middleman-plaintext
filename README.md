@@ -2,6 +2,8 @@
 
 Generate plaintext versions of resources. Inspired heavily by John Gruber at [daring fireball][], displaying the raw markdown used to generate a post by appending `.text` to the URL. (eg, <http://daringfireball.net/2010/07/improved_regex_for_matching_urls.text>)
 
+[daring fireball]: https://daringfireball.net/
+
 ## Usage
 
 Out of the box the extension expects `layout/layout.text.erb` to be the layout for plaintext rendering of resources, and it also will ignore all resources.
