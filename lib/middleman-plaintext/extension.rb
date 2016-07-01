@@ -4,6 +4,7 @@ require "middleman-core"
 module Middleman
   class PlaintextExtension < Extension
 
+    option :filename, "index.text", "Name of file to output plaintext in"
     option :layout, "layout.text", "Layout to use for text file"
     option :handle_file, -> (resource) { false }, "block to decide whether to plaintext a resource"
 
@@ -23,7 +24,7 @@ module Middleman
     end
 
     def textify(resource)
-      to = resource.destination_path.sub("/index.html", "/index.text")
+      to = resource.destination_path.sub("/index.html", "/#{options[:filename]}")
       source = resource.file_descriptor[:full_path].to_s
 
       ::Middleman::Sitemap::Resource.new(app.sitemap, to, source).tap do |r|
