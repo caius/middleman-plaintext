@@ -25,6 +25,8 @@ A slightly more real-world example overrides the template name, and only "plaint
       end
     end
 
+You can also change the output filename with the `filename` option. Defaults to `index.text`.
+
 ## Helpful things to know
 
 * Current resource is `current_page` in the layout as usual
@@ -35,3 +37,11 @@ A slightly more real-world example overrides the template name, and only "plaint
 * Render the source file completely raw, without the frontmatter
 
         Middleman::FileRenderer.new(@app, current_page.file_descriptor[:full_path].to_s).template_data_for_file
+
+## Changelog
+
+* Turn output filename into an option, `filename`
+
+### v0.8.0
+
+* Initial release. Generates index.text files based on handler with specified layout.
