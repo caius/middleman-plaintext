@@ -40,6 +40,8 @@ You can also change the output filename with the `filename` option. Defaults to 
 
 ## Changelog
 
+### v0.8.1
+
 * Turn output filename into an option, `filename`
 
 ### v0.8.0
