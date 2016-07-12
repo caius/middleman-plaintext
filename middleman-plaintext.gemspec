@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.email       = %w(dev@caius.name)
   s.summary     = %{Generate plaintext versions of resources}
   s.description = %{Generate raw un-rendered versions of selected resources. Shout out to John Gruber for the original idea - eg: http://daringfireball.net/2010/07/improved_regex_for_matching_urls.text}
+  s.license     = "MIT"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
